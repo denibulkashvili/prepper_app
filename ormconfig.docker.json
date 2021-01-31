@@ -1,0 +1,19 @@
+{
+   "type": "pg",
+   "host": "db",
+   "port": 5432,
+   "username": "postgres",
+   "password": "postgres",
+   "database": "prepper",
+   "synchronize": false,
+   "logging": false,
+   "entities": [
+      "src/entities/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "cli": {
+      "migrationsDir": "src/migration"
+   }
+}
