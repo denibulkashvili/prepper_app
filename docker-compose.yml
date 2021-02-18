@@ -11,9 +11,9 @@ services:
       - ./pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-  web:
-    image: deni/prepper:1
-    depends_on:
-      - db
-    ports:
-      - "4000:4000"
+  # web:
+  #   image: deni/prepper:1
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "4000:4000"

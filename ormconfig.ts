@@ -1,6 +1,16 @@
-const testOptions = process.env.NODE_ENV === 'test' ? { database: 'test' } : {}
+const testOptions =
+  process.env.NODE_ENV === 'test'
+    ? {
+        database: 'test',
+        entities: ['**/**/*entity.ts'],
+        migrations: ['**/migration/**/*.{js,ts}'],
+        // cli: {
+        //   migrationsDir: [],
+        // },
+      }
+    : {}
 
-console.log({ testOptions })
+// console.log({ testOptions })
 module.exports = {
   type: 'postgres',
   host: 'localhost',
